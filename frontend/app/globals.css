@@ -1,0 +1,58 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-fade";
+@import "tailwindcss";
+
+:root {
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+
+  }
+}
+
+.swiper-pagination-bullet {
+  background-color: #ffffff !important;
+  opacity: 0.4 !important;
+  width: 10px !important;
+  height: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: #C5A059 !important;
+  opacity: 1 !important;
+  width: 28px !important;
+  border-radius: 6px !important;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #C5A059 !important; 
+  transition: color 0.3s ease, transform 0.3s ease !important;
+}
+
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #D4B36E !important; 
+  transform: scale(1.15) !important;
+}
+
+
+.customShadow{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
