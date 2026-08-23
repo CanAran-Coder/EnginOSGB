@@ -3,7 +3,8 @@ import { getAboutUsText } from "@/services/getAboutUsText";
 
 async function AboutUs() {
 
-    const text = await getAboutUsText();
+    const data = await getAboutUsText();
+    const text = data.content
 
     return (<>
         <main className="flex justify-center items-center flex-1">

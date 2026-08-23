@@ -17,8 +17,7 @@ public class AboutUsController {
     @GetMapping("/getContent")
     public ResponseEntity<AboutUsResponse> getContent() {
 
-        return ResponseEntity.ok(aboutUsService.getContent());
-
+        return  ResponseEntity.ok(aboutUsService.getContent());
     }
 
 }
