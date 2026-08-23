@@ -5,8 +5,9 @@ import BrandBanner from "../ui/BrandBanner";
 function Navbar() {
 
     const NAV_LINKS = [
+        {label:"Ana Sayfa",href:"/"},
         {label:"Hakkımızda",href:"/aboutUs"},
-        {label:"Referanslar",href:"/referances"},
+        {label:"Referanslar",href:"/references"},
         {label:"Ekibimiz",href:"/ourTeam"},
         {label:"Bize Katılın",href:"/joinUs"},
         {label:"Galeri",href:"/gallery"},
