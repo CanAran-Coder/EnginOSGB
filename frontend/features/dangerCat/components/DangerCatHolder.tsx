@@ -37,7 +37,7 @@ function DangerCatHolder() {
 
                 <h1 className="text-zinc-900/80 font-black text-3xl tracking-tight leading-relaxed">Tehlike Sınıfınızı Ölçün</h1>
                 <div className="flex gap-2">
-                    <input disabled={loading} onChange={e => setNace(e.target.value)} placeholder="6 Haneli NACE Kodunuzu Giriniz." className="disabled:pointer-events-none tracking-tight border-2 rounded-xl p-2 w-120 text-center text-xl" required />
+                    <input disabled={loading} onChange={e => setNace(e.target.value)} placeholder="NACE Kodunuzu Giriniz." className="disabled:pointer-events-none tracking-tight border-2 rounded-xl p-2 w-120 text-center text-xl" required />
                     <button disabled={loading} onClick={() => handleClick()} className="disabled:pointer-events-none border-2 p-2 rounded hover:scale-[1.05] cursor-pointer text-center w-40 hover:bg-zinc-900 duration-300 ease-in-out hover:text-white">{loading ? "Analiz Ediliyor..." :"Ölç"}</button>
 
 

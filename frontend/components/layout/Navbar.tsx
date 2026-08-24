@@ -8,7 +8,7 @@ function Navbar() {
         {label:"Ana Sayfa",href:"/"},
         {label:"Hakkımızda",href:"/aboutUs"},
         {label:"Referanslar",href:"/references"},
-        {label:"Ekibimiz",href:"/ourTeam"},
+        {label:"Ekibimiz",href:"/teamMembers"},
         {label:"Bize Katılın",href:"/joinUs"},
         {label:"Galeri",href:"/gallery"},
         {label:"Tehlike Sınıfları",href:"/dangerCat"},

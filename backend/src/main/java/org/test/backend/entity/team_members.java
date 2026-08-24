@@ -10,10 +10,14 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Reference extends BaseEntity {
+public class team_members extends SoftDeleteEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String logo_url;
+    private String fullName;
+    private String title;
+    private String photoUrl;
+    private Integer displayOrder;
+
+
 }
