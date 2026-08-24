@@ -21,7 +21,7 @@ function Navbar() {
     return ( 
         <>
 
-            <nav className="flex justify-between items-center w-full h-25">
+            <nav className="flex justify-between items-center w-full h-25 shadow-xl shadow-black/10">
 
                 <BrandBanner/>
 

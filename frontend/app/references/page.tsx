@@ -1,4 +1,4 @@
-import ReferenceHolder from "@/components/layout/ReferenceHolder";
+import ReferenceHolder from "@/features/references/components/ReferenceHolder";
 
 function References() {
     return ( <>

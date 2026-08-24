@@ -52,7 +52,7 @@ const SLIDER_DATA = [
   }
 ];
 
-export default function HeroSlider() {
+export default function HeroSlider() {  
   return (
     <section className="w-full h-[80vh] min-h-[500px] bg-zinc-900 relative">
       <Swiper
