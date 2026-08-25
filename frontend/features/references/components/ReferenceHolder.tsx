@@ -13,7 +13,7 @@ async function ReferenceHolder() {
 
 
                 {/* Ana Başlık */}
-                <h1 className="text-3xl font-black tracking-tight text-zinc-900 md:text-4xl border-b-2 border-[#D4B36E]">
+                <h1 className="text-3xl font-black tracking-tight text-zinc-900 md:text-4xl border-b-4 border-[#D4B36E]">
                     Referanslarımız
                 </h1>
 
