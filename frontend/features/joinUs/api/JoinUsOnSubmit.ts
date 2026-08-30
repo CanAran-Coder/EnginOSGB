@@ -11,8 +11,8 @@ export async function JoinUsOnSubmit(formData: FormData) {
         cloudinaryData.append("file",cvFile)
         cloudinaryData.append("upload_preset","enginosgb_preset")
         cloudinaryData.append("folder","enginosgb/cvs")
-        
-        const response = await fetch("https://api.cloudinary.com/v1_1/duxfdxiup/auto/upload",{
+        cloudinaryData.append("resource_type", "raw");
+        const response = await fetch("https://api.cloudinary.com/v1_1/duxfdxiup/raw/upload",{
             method:"POST",
             body:cloudinaryData
         });
@@ -27,7 +27,7 @@ export async function JoinUsOnSubmit(formData: FormData) {
         city: data.city,
         email: data.email,
         experience: data.experience,
-        expert: data.expert,
+        expertise: data.expert,
         phone: data.phone,
         cvUrl: cvUrl
 

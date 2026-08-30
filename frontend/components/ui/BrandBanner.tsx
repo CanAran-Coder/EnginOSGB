@@ -1,14 +1,14 @@
 import Image from "next/image";
 
 function BrandBanner() {
-    return ( <>
-    
+    return (<>
+
 
         <div className="flex items-center gap-3">
-            
+
             <div className="relative h-14 w-14 shrink-0 ml-2">
 
-                <Image  className="object-contain" src={"/letter-e.png"} alt="brandIcon" fill priority/>
+                <Image className="object-contain" src={"/letter-e.png"} alt="brandIcon" fill priority />
 
             </div>
 
@@ -21,8 +21,8 @@ function BrandBanner() {
 
         </div>
 
-    
-    </> );
+
+    </>);
 }
 
 export default BrandBanner;

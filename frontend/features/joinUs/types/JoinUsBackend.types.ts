@@ -4,7 +4,7 @@ interface JoinUsBackend{
     email:string
     phone:string
     city:string
-    expert:string
+    expertise:string
     certificate:string
     experience:string
     cvUrl:string
