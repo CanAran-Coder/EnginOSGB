@@ -2,6 +2,7 @@ package org.test.backend.service.Impl;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.test.backend.dto.request.ReferenceRequest;
 import org.test.backend.dto.response.ReferenceResponse;
 import org.test.backend.entity.Reference;
 import org.test.backend.repository.ReferenceRepository;
@@ -28,5 +29,14 @@ public class ReferenceServiceImpl implements ReferenceService {
         Map<String,String> response = new HashMap<>();
         response.put("message", "Referans Başarıyla Silindi!");
         return response;
+    }
+
+    @Override
+    public void saveReference(ReferenceRequest request) {
+
+        Reference reference = new Reference();
+        reference.setName(request.brandName());
+        reference.setLogo_url(request.logoUrl());
+        referenceRepository.save(reference);
     }
 }

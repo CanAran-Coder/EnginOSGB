@@ -1,6 +1,7 @@
 package org.test.backend.controller;
 
 import lombok.RequiredArgsConstructor;
+import org.hibernate.annotations.SQLRestriction;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.test.backend.dto.request.OfferRequest;
@@ -25,5 +26,11 @@ public class OfferController {
     @GetMapping("/dashboard/getProposals")
     public ResponseEntity<List<Offer>> getOffers() {
         return  ResponseEntity.ok(offerService.getOffers());
+    }
+
+    @DeleteMapping("/deleteOffer")
+    public ResponseEntity<Map<String,String>> deleteOffer(@RequestBody Long offerId) {
+            offerService.deleteOffer(offerId);
+        return ResponseEntity.ok(Map.of("message","Teklif Başarıyla Silindi!"));
     }
 }

@@ -3,10 +3,14 @@ package org.test.backend.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 @Entity
 @Getter
 @Setter
+@SQLDelete(sql="UPDATE offer set is_deleted = true where id=?")
+@SQLRestriction("is_deleted = false")
 public class Offer extends SoftDeleteEntity {
 
     @Id

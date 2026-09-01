@@ -2,6 +2,8 @@
 
 
 interface ProposalTableItemType{
+    id:number
+    createdAt:string
     brandName: string
     ownerName: string
     phoneNumber: string

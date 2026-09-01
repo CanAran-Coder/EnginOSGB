@@ -10,5 +10,6 @@ public interface OfferService {
 
     void addOffer(OfferRequest offerRequest);
     List<Offer> getOffers();
+    public void deleteOffer(Long offerId);
 
 }

@@ -1,14 +1,20 @@
 'use client'
+import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
 function ShadowControls({title,deleteFunction,id,setLight}:{title:string,deleteFunction:Function,id:number,setLight:any}) {
+    
     async function handleClickYes(){
         const toastId = toast.loading("Siliniyor...")
         const response = await deleteFunction(id)
+        toast.dismiss(toastId)
         if(!response.success){
             toast.error(response.message)
+            return
         }
-        toast.dismiss(toastId)
+        
         toast.success(response.message)
+        setLight(false)
+
     }
 
     async function handleClickNo(){

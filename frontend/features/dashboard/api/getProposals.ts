@@ -9,7 +9,6 @@ export async function getProposals(){
 
     const response = await fetch(`${backend}/offer/dashboard/getProposals`,{method:"GET"})
     const data = await response.json()
-    console.log(data)
     if(!response.ok){
         return {success:false,message:data.message}
     }

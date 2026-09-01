@@ -1,5 +1,6 @@
 interface formDataType {
     brandName: string
+    email:string
     ownerName: string
     phoneNumber: string
     city: string

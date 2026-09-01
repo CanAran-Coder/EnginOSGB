@@ -12,6 +12,7 @@ public interface JobApplicationsService {
 
     public JobApplicationsResponse joinTeam(JobApplicationsRequest request);
     public List<JobApplications> getAll();
+    public void deleteApplication(Long id);
 
 
 }

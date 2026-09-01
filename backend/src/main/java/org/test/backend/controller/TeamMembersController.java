@@ -3,6 +3,7 @@ package org.test.backend.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.test.backend.dto.request.TeamMembersRequest;
 import org.test.backend.dto.response.TeamMembersResponse;
 import org.test.backend.service.TeamMembersService;
 
@@ -21,9 +22,16 @@ public class TeamMembersController {
         return ResponseEntity.ok(teamMembersService.getTeamMembers());
     }
     @DeleteMapping("/deleteMember")
-    public ResponseEntity<Map<String,String>> deleteMember(@RequestParam Long id){
+    public ResponseEntity<Map<String,String>> deleteMember(@RequestBody Long id){
         teamMembersService.deleteMember(id);
         return ResponseEntity.ok(Map.of("message","Silme İşlemi Başarılı!"));
+    }
+
+    @PostMapping("/addMember")
+    public ResponseEntity<Map<String,String>> addMember(@RequestBody TeamMembersRequest request){
+
+        teamMembersService.addMember(request);
+        return ResponseEntity.ok(Map.of("message","Kişi Başarıyla Eklendi!"));
     }
 
 }

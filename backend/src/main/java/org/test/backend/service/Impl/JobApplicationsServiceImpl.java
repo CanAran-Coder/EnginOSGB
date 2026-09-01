@@ -30,5 +30,10 @@ public class JobApplicationsServiceImpl implements JobApplicationsService {
         return jobApplicationsRepository.findAll();
     }
 
+    @Override
+    public void deleteApplication(Long id) {
+        jobApplicationsRepository.deleteById(id);
+    }
+
 
 }

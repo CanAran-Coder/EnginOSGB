@@ -3,7 +3,7 @@ import { getReferences } from "@/services/getReferences";
 
 async function DashboardReferences() {
 
-    const headers = ["Id","Marka","Logo","Kontrol"]
+    const headers = ["Marka","Logo","Kontrol"]
     const {references} = await getReferences();
 
     return ( <>

@@ -5,6 +5,7 @@ export async function sendForm(formData: FormData) {
     const data: formDataType = {
         brandName: formData.get("brandName") as string,
         ownerName: formData.get("ownerName") as string,
+        email:formData.get("email") as string,
         phoneNumber: formData.get("phoneNumber") as string,
         city: formData.get("city") as string,
         dangerCat: formData.get("dangerCat") as string,
@@ -31,7 +32,6 @@ export async function sendForm(formData: FormData) {
         return { success: false, message: result.message }
 
     }
-
     return { success: true, message: result.message }
 
 }

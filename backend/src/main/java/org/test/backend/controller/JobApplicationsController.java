@@ -9,6 +9,7 @@ import org.test.backend.entity.JobApplications;
 import org.test.backend.service.JobApplicationsService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -25,5 +26,9 @@ public class JobApplicationsController {
     public ResponseEntity<List<JobApplications>> getAllJobApplications() {
         return ResponseEntity.ok(jobApplicationsService.getAll());
     }
-
+    @DeleteMapping("/deleteJoinUs")
+    public ResponseEntity<Map<String,String>> deleteJobApplication(@RequestBody Long id) {
+        jobApplicationsService.deleteApplication(id);
+        return ResponseEntity.ok(Map.of("message", "Başvuru Başarıyla Silindi!"));
+    }
 }
