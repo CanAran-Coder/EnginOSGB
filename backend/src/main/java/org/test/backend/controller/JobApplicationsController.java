@@ -2,13 +2,13 @@ package org.test.backend.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.test.backend.dto.request.JobApplicationsRequest;
 import org.test.backend.dto.response.JobApplicationsResponse;
+import org.test.backend.entity.JobApplications;
 import org.test.backend.service.JobApplicationsService;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,6 +19,11 @@ public class JobApplicationsController {
     @PostMapping("/joinTeam")
     public ResponseEntity<JobApplicationsResponse> joinTeam(@RequestBody JobApplicationsRequest jobApplicationsRequest) {
         return ResponseEntity.ok(jobApplicationsService.joinTeam(jobApplicationsRequest));
+    }
+
+    @GetMapping("/dashboard/getAll")
+    public ResponseEntity<List<JobApplications>> getAllJobApplications() {
+        return ResponseEntity.ok(jobApplicationsService.getAll());
     }
 
 }

@@ -2,14 +2,12 @@ package org.test.backend.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.test.backend.dto.response.TeamMembersResponse;
 import org.test.backend.service.TeamMembersService;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/teamMembers")
@@ -21,6 +19,11 @@ public class TeamMembersController {
     @GetMapping("/getMembers")
     public ResponseEntity<List<TeamMembersResponse>> getTeamMembers() {
         return ResponseEntity.ok(teamMembersService.getTeamMembers());
+    }
+    @DeleteMapping("/deleteMember")
+    public ResponseEntity<Map<String,String>> deleteMember(@RequestParam Long id){
+        teamMembersService.deleteMember(id);
+        return ResponseEntity.ok(Map.of("message","Silme İşlemi Başarılı!"));
     }
 
 }

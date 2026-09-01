@@ -1,12 +1,15 @@
 package org.test.backend.service.Impl;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.test.backend.dto.response.TeamMembersResponse;
 import org.test.backend.repository.TeamMembersRepository;
 import org.test.backend.service.TeamMembersService;
 
 import java.util.List;
+import java.util.Map;
+
 @Service
 @RequiredArgsConstructor
 public class TeamMembersServiceImpl implements TeamMembersService {
@@ -14,5 +17,11 @@ public class TeamMembersServiceImpl implements TeamMembersService {
     @Override
     public List<TeamMembersResponse> getTeamMembers() {
         return teamMembersRepository.findAllByOrderByDisplayOrderAsc();
+    }
+
+    @Override
+    public void deleteMember(Long id) {
+        teamMembersRepository.deleteById(id);
+
     }
 }

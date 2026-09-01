@@ -1,7 +1,7 @@
 
 
 export async function getAboutUsText(){
-    const backend = process.env.API_URL
+    const backend = process.env.NEXT_PUBLIC_API_URL
     if(backend){
         const response = await fetch(`${backend}/aboutUs/getContent`,{method:"GET",next:{revalidate:86400}})
         const data = await response.json();

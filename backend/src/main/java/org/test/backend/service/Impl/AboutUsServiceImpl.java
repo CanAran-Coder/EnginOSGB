@@ -1,10 +1,15 @@
 package org.test.backend.service.Impl;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
+import org.test.backend.dto.request.AboutUsRequest;
 import org.test.backend.dto.response.AboutUsResponse;
+import org.test.backend.entity.AboutUs;
 import org.test.backend.repository.AboutUsRepository;
 import org.test.backend.service.AboutUsService;
+
 
 @Service
 @RequiredArgsConstructor
@@ -21,6 +26,14 @@ public class AboutUsServiceImpl implements AboutUsService {
 
     }
 
+    @Override
+    @Transactional
+    public void saveText(AboutUsRequest text) {
+        AboutUs aboutUs = aboutUsRepository.findFirstByOrderByIdAsc().orElseThrow(()-> new EntityNotFoundException("Hakkımızda Metni Bulunamadı!"));
+        aboutUs.setContent(text.content());
+
+
+    }
 
 
 }

@@ -2,11 +2,11 @@ package org.test.backend.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.test.backend.dto.response.ReferenceResponse;
 import org.test.backend.service.ReferenceService;
+
+import java.util.Map;
 
 
 @RestController
@@ -20,6 +20,12 @@ public class ReferenceController {
 
         return ResponseEntity.ok(referenceService.getReferences());
 
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Map<String,String>> deleteReferences(@RequestBody Long Id){
+
+        return ResponseEntity.ok(referenceService.deleteReference(Id));
     }
 
 }

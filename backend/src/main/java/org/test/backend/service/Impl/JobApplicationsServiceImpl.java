@@ -10,6 +10,8 @@ import org.test.backend.entity.JobApplications;
 import org.test.backend.repository.JobApplicationsRepository;
 import org.test.backend.service.JobApplicationsService;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class JobApplicationsServiceImpl implements JobApplicationsService {
@@ -22,4 +24,11 @@ public class JobApplicationsServiceImpl implements JobApplicationsService {
 
         return new JobApplicationsResponse(SuccessStates.SUCCESS);
     }
+
+    @Override
+    public List<JobApplications> getAll() {
+        return jobApplicationsRepository.findAll();
+    }
+
+
 }

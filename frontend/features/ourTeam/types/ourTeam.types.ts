@@ -3,4 +3,5 @@ interface ourTeamCardProps{
     photo_url:string
     title:string
     full_name:string
+    displayOrder:number
 }

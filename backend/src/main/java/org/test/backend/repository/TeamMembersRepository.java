@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface TeamMembersRepository extends JpaRepository<team_members, Long> {
-    @Query("SELECT new org.test.backend.dto.response.TeamMembersResponse(t.id, t.title, t.photoUrl, t.fullName) " +
+    @Query("SELECT new org.test.backend.dto.response.TeamMembersResponse(t.id, t.title, t.photoUrl, t.fullName,t.displayOrder) " +
             "FROM team_members t ORDER BY t.displayOrder ASC")
     List<TeamMembersResponse> findAllByOrderByDisplayOrderAsc();
 }
