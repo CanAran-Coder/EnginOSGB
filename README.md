@@ -1,30 +1,20 @@
-# 🚀 [Proje Adı]
+# EnginOSGB
 
-> [Projenin tek cümlelik kısa ve vurucu açıklaması. Örn: Next.js ve Spring Boot ile geliştirilmiş, Cloudinary entegrasyonlu yönetilebilir galeri ve yönetim paneli uygulaması.]
-
----
-
-## 📌 İçindekiler
-- [Özellikler](#-özellikler)
-- [Kullanılan Teknolojiler](#-kullanılan-teknolojiler)
-- [Mimarisi ve Ekran Görüntüleri](#-mimarisi-ve-ekran-görüntüleri)
-- [Kurulum ve Başlangıç](#-kurulum-ve-başlangıç)
-  - [Gereksinimler](#gereksinimler)
-  - [Backend (Spring Boot)](#backend-spring-boot)
-  - [Frontend (Next.js)](#frontend-nextjs)
-- [Çevre Değişkenleri (.env)](#-çevre-değişkenleri-env)
-- [API Endpoints](#-api-endpoints)
-- [Lisans](#-lisans)
+> Gerçek hayat OSGB Full Stack Web App örneğidir.
 
 ---
+
 
 ## ✨ Özellikler
 
-- 🖼️ **Çoklu Fotoğraf Yükleme:** Cloudinary entegrasyonu ile fotoğrafları doğrudan bulut sunucusunda depolama.
-- ⚡ **Server Actions:** Next.js Server Actions kullanarak hızlı ve güvenli form işlemleri.
-- 🗄️ **PostgreSQL & JSONB:** Galeri fotoğraflarını PostgreSQL üzerinde `JSONB` tipinde esnek veri yapısıyla saklama.
-- 🎨 **Modern Arayüz:** Tailwind CSS ve React Icons ile duyarlı (responsive) dashboard tasarımı.
-- 🔒 **Güvenli Backend Yapısı:** Spring Boot REST API mimarisi ve custom DTO yapısı.
+- **Çoklu Fotoğraf Yükleme:** Cloudinary entegrasyonu ile fotoğrafları doğrudan bulut sunucusunda depolama.
+- **Server Actions:** Next.js Server Actions kullanarak hızlı ve güvenli form işlemleri.
+- **PostgreSQL & JSONB:** Galeri fotoğraflarını PostgreSQL üzerinde `JSONB` tipinde esnek veri yapısıyla saklama.
+- **Modern Arayüz:** Tailwind CSS ve React Icons ile duyarlı (responsive) dashboard tasarımı.
+- **Güvenli Backend Yapısı:** Spring Boot REST API mimarisi ve custom DTO yapısı.
+- **Caching:** Redis ile düşük gecikme.
+- **AI Powered:** Gemini AI ile şirket bilgisi sorgulama.
+
 
 ---
 
@@ -35,9 +25,11 @@
 - **Kütüphaneler:** React, Tailwind CSS, React Hot Toast, React Icons
 
 ### Backend
-- **Framework:** Java / Spring Boot (Spring Data JPA, Hibernate)
+- **Framework:** Java / Spring Boot
 - **Veritabanı:** PostgreSQL (`JSONB` desteği ile)
 - **Medya Depolama:** Cloudinary API
+- **Caching:** Redis
+- **AI Model:** Gemini
 
 ---
 
@@ -49,20 +41,3 @@
 
 ---
 
-## 🚀 Kurulum ve Başlangıç
-
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları takip edin.
-
-### Gereksinimler
-- **Node.js:** v18+ 
-- **Java:** JDK 17+
-- **PostgreSQL:** v14+
-
----
-
-### Backend (Spring Boot)
-
-1. Depoyu klonlayın:
-   ```bash
-   git clone [https://github.com/kullanici-adi/proje-adi.git](https://github.com/kullanici-adi/proje-adi.git)
-   cd proje-adi/backend
